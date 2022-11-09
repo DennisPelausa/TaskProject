@@ -70,6 +70,11 @@ function addTask() {
    taskItem.appendChild(editBtn);
    taskItem.appendChild(delBtn);
 
+   if (list.childElementCount >= 5) {
+    addTaskBtn.disabled = true;
+    alert("5 to do list is enough for the day")
+}
+
    //del button
    function delValue() {
     this.parentNode.remove()
@@ -98,10 +103,10 @@ function addTask() {
         taskInput.setAttribute("disabled", "");  
         editBtn.removeAttribute("disabled", "");
         taskItem.removeChild(saveBtn);
-        text = "Saved!";
+        let text = "Saved!";
               }   
         else {
-            text = "Changes not saved";
+           let text = "Changes not saved";
              //disable the edit    
             editBtn.removeAttribute("disabled", "");
             //disable name input
