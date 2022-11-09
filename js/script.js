@@ -54,12 +54,12 @@ function addTask() {
    taskInput.value = TaskName;
    taskInput.defaultValue = TaskName;
 
-   let editBtn = document.createElement("span");
+   let editBtn = document.createElement("button");
    editBtn.innerHTML= '<span class="material-symbols-rounded">edit_square</span>';
    editBtn.classList = "editBtn";
    editBtn.addEventListener("click", editValue);
 
-   let delBtn = document.createElement("span");
+   let delBtn = document.createElement("button");
    delBtn.innerHTML= '<span class="material-symbols-rounded">delete</span>';
    delBtn.classList = "delBtn";
    delBtn.addEventListener("click", delValue);
@@ -82,7 +82,7 @@ function addTask() {
     editBtn.setAttribute("disabled", "")
 
     //create save button
-    let saveBtn = document.createElement("span");
+    let saveBtn = document.createElement("button");
     saveBtn.innerHTML = '<span class="material-symbols-rounded">save_as</span>';
     saveBtn.classList = "saveBtn";
     saveBtn.addEventListener("click", saveValue);
@@ -91,35 +91,27 @@ function addTask() {
     taskItem.appendChild(saveBtn);
 
     function saveValue() {
-        let text = "Are you sure you want to save " + taskInput.value + "as name?";
+        let text = "Are you sure you want to save " + taskInput.value + " as your task?";
         if (confirm(text) == true) {
         let newValue = taskInput.value;
         nameInput.defaultValue = newValue;    
-
-    //disable
-    taskInput.setAttribute("disabled", "")
-
-    //disable the edit    
-    editBtn.removeAttribute("disabled", "")
-
-    //disable the save 
-    taskItem.removeChild(saveBtn)
-    
-
-    //text
-    text = "Ano ba? Pabago bago ng isip. Ayan na save na";
-        }   
+        taskInput.setAttribute("disabled", "");  
+        editBtn.removeAttribute("disabled", "");
+        taskItem.removeChild(saveBtn);
+        text = "Saved!";
+              }   
         else {
-            text = "Cancel, cancel eh di ipa billboard mo!";
+            text = "Changes not saved";
              //disable the edit    
-            editBtn.removeAttribute("disabled", "")
+            editBtn.removeAttribute("disabled", "");
             //disable name input
             taskInput.setAttribute("disabled", "");
             //saveBtn.setAttribute("display", "none")
-            taskItem.removeChild(saveBtn)
+            taskItem.removeChild(saveBtn);
             taskInput.value = taskInput.defaultValue;
+           
         }  
-        alert (text);    
+        alert (text); 
         
     }
    }
