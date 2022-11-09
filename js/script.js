@@ -54,13 +54,13 @@ function addTask() {
    taskInput.value = TaskName;
    taskInput.defaultValue = TaskName;
 
-   let editBtn = document.createElement("button");
-   editBtn.textContent = "Edit";
+   let editBtn = document.createElement("span");
+   editBtn.innerHTML= '<span class="material-symbols-rounded">edit_square</span>';
    editBtn.classList = "editBtn";
    editBtn.addEventListener("click", editValue);
 
-   let delBtn = document.createElement("button");
-   delBtn.textContent = "Delete";
+   let delBtn = document.createElement("span");
+   delBtn.innerHTML= '<span class="material-symbols-rounded">delete</span>';
    delBtn.classList = "delBtn";
    delBtn.addEventListener("click", delValue);
 
@@ -82,8 +82,8 @@ function addTask() {
     editBtn.setAttribute("disabled", "")
 
     //create save button
-    let saveBtn = document.createElement("button");
-    saveBtn.textContent = "Save";
+    let saveBtn = document.createElement("span");
+    saveBtn.innerHTML = '<span class="material-symbols-rounded">save_as</span>';
     saveBtn.classList = "saveBtn";
     saveBtn.addEventListener("click", saveValue);
 

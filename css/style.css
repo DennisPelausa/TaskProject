@@ -16,9 +16,9 @@ form{
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-		background: white;
-		border-radius: 10px;
-        -webkit-border-radius: 11px 11px 0px 0px;
+	background: white;
+	border-radius: 10px;
+    -webkit-border-radius: 11px 11px 0px 0px;
     border-radius: 11px 11px 0px 0px;
     -webkit-box-shadow: -8px 5px 9px 9px rgba(64, 65, 63, 0.74); 
     box-shadow: -8px 5px 9px 9px rgba(64, 65, 63, 0.74);
@@ -106,9 +106,8 @@ form #current-time {
     cursor: pointer;
 }
 
-#tasks button{
-    background-color: #0a2ea4;
-    color: #ffffff;
+#tasks span{
+    color: #0d75ec;
     height: 100%;
     width: 40px;
     border-radius: 5px;
