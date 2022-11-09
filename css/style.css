@@ -88,23 +88,24 @@ form #current-time {
     width: 100%;
     position: relative;
 }
-#tasks{
+#tasks input{
+    font-family: 'Merriweather',sans-serif;
+    font-size: 15px;
+    color: #111111;
+    font-weight: 500;
     background-color: #c5e1e6;
     height: 50px;
-		margin-bottom: 8px;
+    width: 100%;
+	margin-bottom: 8px;
     padding: 5px 10px;
     display: flex;
-		border-radius: 5px;
+	border-radius: 5px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 1px solid #939697;
     cursor: pointer;
 }
-#tasks {
-    font-family: 'Merriweather',sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-}
+
 #tasks button{
     background-color: #0a2ea4;
     color: #ffffff;

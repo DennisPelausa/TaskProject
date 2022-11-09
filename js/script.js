@@ -70,6 +70,7 @@ function addTask() {
    taskItem.appendChild(editBtn);
    taskItem.appendChild(delBtn);
 
+   //del button
    function delValue() {
     this.parentNode.remove()
   }
@@ -122,4 +123,5 @@ function addTask() {
         
     }
    }
+   
 }
