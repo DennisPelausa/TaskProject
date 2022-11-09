@@ -59,10 +59,20 @@ function addTask() {
    editBtn.classList = "editBtn";
    editBtn.addEventListener("click", editValue);
 
+   let delBtn = document.createElement("button");
+   delBtn.textContent = "Delete";
+   delBtn.classList = "delBtn";
+   delBtn.addEventListener("click", delValue);
+
    //append
    taskList.appendChild(taskItem);
    taskItem.appendChild(taskInput);
-   taskItem.appendChild(editBtn)
+   taskItem.appendChild(editBtn);
+   taskItem.appendChild(delBtn);
+
+   function delValue() {
+    this.parentNode.remove()
+  }
 
    function editValue() {
     //removed disabled attribute
